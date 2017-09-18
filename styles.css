@@ -1,0 +1,22 @@
+h1 {
+	color: purple;
+	font-family: 'Comic Sans MS';
+}
+
+.row {
+	overflow: hidden;
+}
+
+.cell {
+	float: left;
+	width: 88px;
+	height: 88px;
+	border: 1px solid black;
+	text-align: center;
+	line-height: 88px;
+}
+
+.row:nth-child(2n) .cell:nth-child(2n),
+.row:nth-child(2n+1) .cell:nth-child(2n+1) {
+	background: rgba(0, 0, 0, 0.5);
+}
