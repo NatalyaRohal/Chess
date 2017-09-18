@@ -25,7 +25,32 @@
 				fieldHTML += '<div class="row">';
 
 				for (colId = 0; colId < field[rowId].length; colId++) {
-					fieldHTML += '<div class="cell">' + field[rowId][colId] + '</div>';
+					fieldHTML += '<div class="cell">';
+					fieldHTML += '<img src="img/';
+
+					switch(field[rowId][colId]) {
+						case 'rook':
+							fieldHTML += 'rook-white';
+							break;
+						case 'knight':
+							fieldHTML += 'knight-white';
+							break;
+						case 'bishop':
+							fieldHTML += 'bishop-white';
+							break;
+						case 'queen':
+							fieldHTML += 'queen-white';
+							break;
+						case 'king':
+							fieldHTML += 'king-white';
+							break;
+						case 'pawn':
+							fieldHTML += 'pawn-white';
+							break;
+					}
+
+					fieldHTML += '.png">';
+					fieldHTML += '</div>';
 				}
 
 				fieldHTML += '</div>';
@@ -41,11 +66,11 @@
 
 			.cell {
 				float: left;
-				width: 70px;
-				height: 70px;
+				width: 88px;
+				height: 88px;
 				border: 1px solid black;
 				text-align: center;
-				line-height: 70px;
+				line-height: 88px;
 			}
 		</style>
 	</body>
