@@ -19,7 +19,19 @@
 				['rook', 'knight', 'bishop', 'queen', 'king', 'bishop', 'knight', 'rook']
 			];
 
-			alert(field);
+			var fieldHTML = '';
+
+			for (rowId = 0; rowId < field.length; rowId++) {
+				fieldHTML += '<div class="row">';
+
+				for (colId = 0; colId < field[rowId].length; colId++) {
+					fieldHTML += '<div class="cell">' + field[rowId][colId] + '</div>';
+				}
+
+				fieldHTML += '</div>';
+			}
+
+			document.getElementById('field').innerHTML = fieldHTML;
 		</script>
 	</body>
 </html>
